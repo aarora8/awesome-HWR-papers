@@ -33,3 +33,18 @@ Number of leaves (i.e. pdf ids): I used 300 which worked well for gmm setup\
 Training options such as learning rate and frames per iteration and num jobs initial/final. I used 1000,000 frames per iter which leads to 4 training egs archives and 26 iterations (for 4 epochs). \
 chunk width: I used "340,300,200,100" because I thought the input alignments might not be very reliable so it might be better to have longer chunks so that the model has more freedom to re-learn the alignments.\
 Other chain options such as regularization configs, shrinkage, ...
+
+
+Usage: ${0##*/} [options]
+Options:
+  --height     : (type = integer, default = $height)
+                 Scale images to have this height, keeping the aspect ratio of
+                 the original image.
+  --nproc      : (type = integer, default = $nproc)
+                 Use this number of concurrent processes to prepare the images.
+  --overwrite  : (type = boolean, default = $overwrite)
+                 Overwrite previously created files.
+  --partition  : (type = string, default = \"$partition\")
+                 Select the \"lines\" or \"sentences\" partition.
+                 Note: Typically the \"lines\" partition is used.
+";
