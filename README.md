@@ -35,16 +35,15 @@ chunk width: I used "340,300,200,100" because I thought the input alignments mig
 Other chain options such as regularization configs, shrinkage, ...
 
 
-Usage: ${0##*/} [options]
-Options:
-  --height     : (type = integer, default = $height)
-                 Scale images to have this height, keeping the aspect ratio of
-                 the original image.
-  --nproc      : (type = integer, default = $nproc)
-                 Use this number of concurrent processes to prepare the images.
-  --overwrite  : (type = boolean, default = $overwrite)
-                 Overwrite previously created files.
-  --partition  : (type = string, default = \"$partition\")
-                 Select the \"lines\" or \"sentences\" partition.
+Usage: ${0##*/} [options]\
+Options:\
+  --height     : (type = integer, default = $height)\
+                 Scale images to have this height, keeping the aspect ratio of\
+                 the original image.\
+  --nproc      : (type = integer, default = $nproc)\
+                 Use this number of concurrent processes to prepare the images.\
+  --overwrite  : (type = boolean, default = $overwrite)\
+                 Overwrite previously created files.\
+  --partition  : (type = string, default = \"$partition\")\
+                 Select the \"lines\" or \"sentences\" partition.\
                  Note: Typically the \"lines\" partition is used.
-";
