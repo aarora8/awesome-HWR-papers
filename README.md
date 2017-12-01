@@ -12,11 +12,11 @@ testset.txt - lines: 1861 writers: 128\
 trainset.txt - lines: 6161 writers: 283\
 validationset1.txt - lines: 900 writers: 46\
 validationset2.txt - lines: 940 writers: 43\
-total - lines: 9862 writers: 500\
+total - lines: 9862 writers: 500
 
 # aachen
 testset.txt - lines: 2915\
 trainset.txt - lines: 6161\
 validationset1.txt - lines: 966\
-total - lines: 10042\
+total - lines: 10042
 
