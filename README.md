@@ -20,3 +20,16 @@ trainset.txt - lines: 6161\
 validationset1.txt - lines: 966\
 total - lines: 10042
 
+SAT triphone gmm baseline: 70% WER 
+chain recipe: 39% WER 
+when I use a lexicon which only includes all the training 
+transcriptions (there are ~1800 OOVs while the total number 
+of unique words in the test set is 3600).
+
+after adding all the test words to the language model  as 1-grams: WER 23%.
+
+FSF: I used 5 for this since the best gmm systems had 6-7 hmm states for each phone (which is ~2x regular size).
+Number of leaves (i.e. pdf ids): I used 300 which worked well for gmm setup
+Training options such as learning rate and frames per iteration and num jobs initial/final. I used 1000,000 frames per iter which leads to 4 training egs archives and 26 iterations (for 4 epochs). 
+chunk width: I used "340,300,200,100" because I thought the input alignments might not be very reliable so it might be better to have longer chunks so that the model has more freedom to re-learn the alignments.
+Other chain options such as regularization configs, shrinkage, ...
